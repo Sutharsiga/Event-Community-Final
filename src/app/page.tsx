@@ -13,10 +13,10 @@ import Testimonials from "@/components/home/Testimonials";
 import SubmitEventCTA from "@/components/home/SubmitEventCTA";
 
 // ✅ Supabase Initialization
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+// const supabase = createClient(
+//   process.env.NEXT_PUBLIC_SUPABASE_URL!,
+//   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+// );
 
 // ✅ Type Definitions
 interface Event {
@@ -41,23 +41,23 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(true);
 
   // ✅ Fetch events from Supabase
-  useEffect(() => {
-    const fetchEvents = async () => {
-      const { data, error } = await supabase.from("events").select("*");
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     const { data, error } = await supabase.from("events").select("*");
   
-      if (error) {
-        console.error("Error fetching events:", error);
-        setError(error.message); // ✅ Assign error message properly
-      } else {
-        console.log("Fetched events:", data);  // Log the data
-        setEvents(data || []); // ✅ Ensure data is always an array
-      }
+  //     if (error) {
+  //       console.error("Error fetching events:", error);
+  //       setError(error.message); // ✅ Assign error message properly
+  //     } else {
+  //       console.log("Fetched events:", data);  // Log the data
+  //       setEvents(data || []); // ✅ Ensure data is always an array
+  //     }
   
-      setLoading(false);
-    };
+  //     setLoading(false);
+  //   };
   
-    fetchEvents();
-  }, []);
+  //   fetchEvents();
+  // }, []);
   
 
   const handleSearch = (searchFilters: Filters) => {

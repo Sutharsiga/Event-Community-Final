@@ -36,11 +36,7 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-700 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
         <p>© 2024 All rights reserved by glory</p>
-        <div className="flex space-x-4">
-          <a href="#" className="hover:text-white">📘</a>
-          <a href="#" className="hover:text-white">🐦</a>
-          <a href="#" className="hover:text-white">📸</a>
-        </div>
+        
         <div className="flex space-x-4">
           <a href="#" className="hover:text-white">Terms & Conditions</a>
           <a href="#" className="hover:text-white">Privacy Policy</a>

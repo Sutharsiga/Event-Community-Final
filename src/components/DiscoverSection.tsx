@@ -14,7 +14,7 @@ const DiscoverSection = () => {
   ];
 
   return (
-    <section className="py-10">
+    <section className="py-10 mx-20">
       <Swiper
         modules={[Navigation]}
         navigation

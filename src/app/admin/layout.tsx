@@ -4,6 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaSignOutAlt, FaHome, FaUsers, FaCalendarAlt } from "react-icons/fa";
+import { MdContentCopy } from "react-icons/md";
+import { FaCheckCircle } from "react-icons/fa";
+import { AiOutlineBarChart } from "react-icons/ai";
+import { IoMdNotifications } from "react-icons/io";
+import { IoSettingsSharp } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
@@ -26,14 +32,56 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             <li>
               <Link href="/admin/events">
                 <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/events" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
-                  <FaCalendarAlt className="mr-2" /> Manage Events
+                  <FaCalendarAlt className="mr-2" /> Event Management
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/admin/users">
                 <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/users" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
-                  <FaUsers className="mr-2" /> Manage Users
+                  <FaUsers className="mr-2" /> User Management
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/eventapprovals"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/eventapprovals" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <FaCheckCircle className="mr-2" /> Event Approvals
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/locationmanagement"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/locationmanagement" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <FaLocationDot className="mr-2" /> Location Management
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/duplicateevents"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/duplicateevents" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <MdContentCopy className="mr-2" /> Event Detection
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/adminnotifications"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/adminnotifications" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <IoMdNotifications className="mr-2" /> Notifications
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/reports"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/reports" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <AiOutlineBarChart className="mr-2" /> Reports & Analytics
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href={"/admin/systemsettings"}>
+              <span className={`flex items-center p-3 rounded-lg ${pathname === "/admin/systemsettings" ? "bg-teal-600" : "hover:bg-gray-700"}`}>
+                  <IoSettingsSharp className="mr-2" /> System Settings
                 </span>
               </Link>
             </li>

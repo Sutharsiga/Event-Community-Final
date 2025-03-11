@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaEdit, FaTrash } from "react-icons/fa";
 
-✅ Supabase Initialization
+//Supabase Initialization
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
@@ -18,7 +18,7 @@ const AdminEvents = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  ✅ Fetch Events from Supabase
+  // Fetch Events from Supabase
   useEffect(() => {
     const fetchEvents = async () => {
       const { data, error } = await supabase.from("events").select("*");
@@ -35,7 +35,7 @@ const AdminEvents = () => {
     fetchEvents();
   }, []);
 
-  ✅ Delete Event Function
+  // Delete Event Function
   const handleDelete = async (id: number) => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
 

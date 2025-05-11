@@ -21,16 +21,29 @@ const Events = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <Header /> {/* ✅ Header included */}
+      <Header />
       <div className="p-8">
-        <h2 className="text-4xl font-bold text-center mb-8 text-teal-700">Upcoming Events</h2>
+        <h2 className="text-4xl font-bold text-center mb-8 text-teal-700">
+          Upcoming Events
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {events.map((event) => (
-            <div key={event.id} className="bg-white rounded-xl shadow-md overflow-hidden">
-              <Image src={event.image} alt={event.title} width={500} height={300} className="w-full h-52 object-cover" />
+            <div
+              key={event.id}
+              className="bg-white rounded-xl shadow-md overflow-hidden"
+            >
+              <Image
+                src={event.image}
+                alt={event.title}
+                width={500}
+                height={300}
+                className="w-full h-52 object-cover"
+              />
               <div className="p-4">
-                <h3 className="text-xl font-semibold text-gray-800">{event.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {event.title}
+                </h3>
                 <p className="flex items-center text-gray-600 mt-2">
                   <FaCalendarAlt className="text-teal-600 mr-2" /> {event.date}
                 </p>
@@ -38,7 +51,6 @@ const Events = () => {
                   <FaMapMarkerAlt className="text-red-500 mr-2" /> {event.location}
                 </p>
 
-                {/* ✅ Updated View Details Button with Navigation */}
                 <Link href={`/events/${event.id}`} passHref>
                   <button className="mt-4 w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800 transition">
                     View Details
@@ -49,7 +61,7 @@ const Events = () => {
           ))}
         </div>
       </div>
-      <Footer /> {/* ✅ Footer included */}
+      <Footer />
     </div>
   );
 };

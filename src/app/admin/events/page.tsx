@@ -5,6 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 //Supabase Initialization
 const supabase = createClient(
@@ -75,10 +76,16 @@ const AdminEvents = () => {
                 <td className="border p-3">{event.date}</td>
                 <td className="border p-3">{event.location}</td>
                 <td className="border p-3 flex justify-center gap-4">
-                  <Link href={`/admin/events/edit/${event.id}`} className="text-blue-600 hover:underline flex items-center">
+                  <Link
+                    href={`/admin/events/edit/${event.id}`}
+                    className="text-blue-600 hover:underline flex items-center"
+                  >
                     <FaEdit className="mr-2" /> Edit
                   </Link>
-                  <button onClick={() => handleDelete(event.id)} className="text-red-600 hover:underline flex items-center">
+                  <button
+                    onClick={() => handleDelete(event.id)}
+                    className="text-red-600 hover:underline flex items-center"
+                  >
                     <FaTrash className="mr-2" /> Delete
                   </button>
                 </td>
@@ -88,15 +95,20 @@ const AdminEvents = () => {
         </table>
       )}
 
-      <Link href="/admin/events/add" className="mt-6 block text-center text-white bg-teal-700 py-2 px-4 rounded-lg hover:bg-teal-800">
-        ➕ Add New Event
+      <Link
+        href="/admin/events/add"
+        className="mt-6 text-center flex items-center justify-center text-white bg-teal-700 py-2 px-4 rounded-lg hover:bg-teal-800"
+      >
+        <div className="flex items-center gap-2">
+          <FaPlus />
+          Add New Event
+        </div>
       </Link>
     </div>
   );
 };
 
 export default AdminEvents;
-
 
 // "use client";
 
@@ -171,7 +183,7 @@ export default AdminEvents;
 //                   <td className="p-3 border">{event.date}</td>
 //                   <td className="p-3 border">
 //                     <span
-//                       className={`px-2 py-1 text-sm font-semibold rounded 
+//                       className={`px-2 py-1 text-sm font-semibold rounded
 //                         ${event.status === "Approved" ? "bg-green-200 text-green-700" : ""}
 //                         ${event.status === "Pending" ? "bg-yellow-200 text-yellow-700" : ""}
 //                         ${event.status === "Rejected" ? "bg-red-200 text-red-700" : ""}`}

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";  // ✅ Load Google Maps API
+import Script from "next/script"; // ✅ Load Google Maps API
 import "./globals.css";
 import { Toaster } from "react-hot-toast"; // ✅ Toast Notifications
+// import { Provider } from "react-redux";
+// import { store } from "@/Store/store";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +30,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Toaster />  {/* ✅ Toast Notifications */}
-        {children}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* <Provider store={store}> */}
+          <Toaster />
+          {children}
+        {/* </Provider> */}
       </body>
     </html>
   );

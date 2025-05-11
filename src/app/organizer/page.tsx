@@ -11,10 +11,10 @@ const eventStats = {
 };
 
 const recentEvents = [
-  { name: "Music Fest", attendees: 200, rating: 4.5 },
-  { name: "Tech Conference", attendees: 150, rating: 4.2 },
-  { name: "Art Show", attendees: 100, rating: 4.0 },
-  { name: "Startup Meetup", attendees: 120, rating: 4.3 },
+  { name: "Wedding", attendees: 200, rating: 4.5 },
+  { name: "Key Birthday", attendees: 150, rating: 4.2 },
+  { name: "Engadgement", attendees: 100, rating: 4.0 },
+  { name: "Baby Shower", attendees: 120, rating: 4.3 },
 ];
 
 export default function Dashboard() {
@@ -24,15 +24,6 @@ export default function Dashboard() {
     <div className="p-6 bg-gray-100 min-h-screen">
       <div className="flex items-center justify-between">
       <h1 className="text-2xl font-bold mb-4">Organizer Dashboard</h1>
-      {/* Create Event Button */}
-      <div className="mb-6">
-        <button
-          className="bg-blue-500 text-white px-4 py-2 rounded shadow-md hover:bg-blue-600 transition"
-          onClick={() => router.push("/create-event")}
-        >
-          + Create New Event
-        </button>
-      </div>
       </div>
 
       {/* Overview Cards */}

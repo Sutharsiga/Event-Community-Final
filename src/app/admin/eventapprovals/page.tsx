@@ -13,13 +13,22 @@ const pendingEvents = [
   },
   {
     id: 2,
-    title: "Art Exhibition",
+    title: "Wedding Function",
     organizer: "Jane Smith",
     date: "April 10, 2025",
     location: "Los Angeles, USA",
     description: "Showcasing modern and contemporary art pieces.",
     status: "Pending",
   },
+  // {
+  //   id: 3,
+  //   title: "Birthday party",
+  //   organizer: "John Mathew",
+  //   date: "May 10, 2025",
+  //   location: "Los Angeles, USA",
+  //   description: "3 Year old baby birthday celebration",
+  //   status: "Pending",
+  // },
 ];
 
 export default function EventApprovals() {

@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const sampleEvents = [
-  { id: 1, name: "Music Concert", date: "2025-03-15", status: "Approved" },
-  { id: 2, name: "Tech Meetup", date: "2025-04-10", status: "Pending" },
-  { id: 3, name: "Art Exhibition", date: "2025-05-05", status: "Rejected" },
-  { id: 4, name: "Startup Pitch", date: "2025-06-20", status: "Approved" },
+  { id: 1, name: "Wedding", date: "2025-03-15", status: "Approved" },
+  { id: 2, name: "Key Birthday", date: "2025-04-10", status: "Pending" },
+  { id: 3, name: "Engadgement", date: "2025-05-05", status: "Rejected" },
+  { id: 4, name: "Baby Shower", date: "2025-06-20", status: "Approved" },
 ];
 
 export default function MyEvents() {

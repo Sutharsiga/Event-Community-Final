@@ -7,19 +7,19 @@ const sampleNotifications = [
   {
     id: 1,
     type: "approval",
-    message: "Your event 'Tech Conference 2025' has been approved!",
+    message: "Your event 'Wedding 2025' has been approved!",
     read: false,
   },
   {
     id: 2,
     type: "rejection",
-    message: "Your event 'Music Festival' was rejected. Check the reason.",
+    message: "Your event 'Baby Shower' was rejected. Check the reason.",
     read: false,
   },
   {
     id: 3,
     type: "reminder",
-    message: "Reminder: 'Startup Meetup' is happening in 2 days.",
+    message: "Reminder: 'Engadgement' is happening in 2 days.",
     read: false,
   },
 ];
